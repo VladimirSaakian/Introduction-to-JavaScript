@@ -207,12 +207,13 @@ console.log(game('rock', computer))
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(distanceInKilometers){
   /*add your code here*/
+  return distanceInKilometers * 0.621371;
 }
 
 
