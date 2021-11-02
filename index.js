@@ -171,32 +171,31 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-let computer =Math.random();
+function randomNumber(){
+  return Math.floor(Math.random() * 3);
+}
+
+function randomChoice (randomNumber){
+return ["paper", "rock", "scissors",][randomNumber];
+}
+
+let computer = (randomChoice(randomNumber()));
 
 function game(user, computer){
   /*add your code here*/
-if(computer <= (1/3)){
-  computer = 'paper';
-}else if (computer <= (2/3)){
-  computer = 'rock';
-}else{
-  computer = 'scissors';
+  if (user === computer) {
+    return "it's a tie";
+  } else if (user === "rock" && computer === "paper") {
+    return "you lose!";
+  } else if (user === "paper" && computer === "scissors") {
+    return "you lose!";
+  } else if (user === "scissors" && computer === "rock") {
+    return "you lose!";
+  } else {
+    return "you win!";
+  }
 }
-if (user === 'scissors' && computer === 'paper'){
-  return 'you win!'
-}else if (user === 'rock' && computer === 'scissors'){
-  return 'you win!'
-}else if (user === 'paper' && computer === 'rock'){
-  return 'you win!'
-}else if (user === 'paper' && computer === 'scissors'){
-  return 'you lose!'
-}else if (user === 'scissors' && computer === 'rock'){
-  return 'you lose!'
-}else {
-  return "it's a tie"
-}
-}
-console.log(game('rock', computer))
+console.log(game('scissors', computer))
 
 
 
@@ -287,7 +286,7 @@ return "you got an F"
 }
 
 }
-console.log(grade(73))
+console.log(grade(73));
 
 
 
