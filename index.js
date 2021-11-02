@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18;
+if(votingAge > 18){
+  console.log("No vote")
+}else{
+  console.log("Can vote")
+}
 
 
 /*
@@ -32,6 +37,12 @@ Do the following:
 
    HINT: no function required
 */
+let num1 = 5;
+let num2 = 10;
+
+if(num1 > num2){
+  console.log('Yes');
+}
 
 
 
@@ -47,6 +58,9 @@ Do the following:
 
    HINT: look up the Number method
 */
+let stringTypeVariable =1991;
+let converted = Number(stringTypeVariable);
+console.log(converted);
 
 
 
